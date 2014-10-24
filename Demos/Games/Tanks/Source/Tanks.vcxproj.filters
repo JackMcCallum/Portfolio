@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="My Independant Framwork">
+      <UniqueIdentifier>{44859bd1-62a3-4f38-b2c6-3a8724e1554b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers">
+      <UniqueIdentifier>{f5361d8b-a19c-4747-a10b-8784c502318f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source">
+      <UniqueIdentifier>{c7e0f298-0da6-408c-9f90-42ec69492ef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Events">
+      <UniqueIdentifier>{1f625c35-ddb9-435b-9968-6f8e55b49728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Events\Input">
+      <UniqueIdentifier>{3341a069-7848-49be-bd4d-434c2b25db37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Events\Base">
+      <UniqueIdentifier>{172e9fdc-2435-4aa0-9354-5a824b4bf616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Events\Frame">
+      <UniqueIdentifier>{17c8a2c9-2a14-473a-9579-bdc1d6dd99f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Misc">
+      <UniqueIdentifier>{ecdcf2b4-42d8-4a0d-b496-6b3516ef3fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Events">
+      <UniqueIdentifier>{d302800a-e672-42e4-8939-490f0e5a8692}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Events\Input">
+      <UniqueIdentifier>{ebc7e0a6-b9bf-4f75-befc-561b6827c3eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Events\Base">
+      <UniqueIdentifier>{28bf1d53-0624-4939-b8b8-8f54303f4177}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Misc">
+      <UniqueIdentifier>{83884d12-eb0a-446c-9ca1-f25d81dcd6aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{5564db82-1004-4508-8a44-fdd1db2cc164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{ef17831f-9ee5-4b22-94a8-e413c5ed5ea7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{4119e31c-10ec-4fab-a71a-b1f7f2d14ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{b7f5b90f-32a8-4d54-8fe9-8f465a385a4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Events\Frame">
+      <UniqueIdentifier>{2f7af757-9746-4655-af96-649412a6855f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Interface">
+      <UniqueIdentifier>{e5aecf24-93d2-4367-9a98-f8bf20ff40db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Interface">
+      <UniqueIdentifier>{aeb375fd-2ff9-4403-9e7a-0804d9385e13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Interface\HUD Elements">
+      <UniqueIdentifier>{8690b557-055d-4dc4-bf47-5aa172e36a5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Interface\HUD Elements">
+      <UniqueIdentifier>{caa0523f-565b-4a9b-81a3-86945841be20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Headers\Collision">
+      <UniqueIdentifier>{91ab0f05-4504-46c8-9d93-9b6684fb5e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="My Independant Framwork\Source\Collision">
+      <UniqueIdentifier>{a0e61ef1-edfd-4b65-869b-933a197a507a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Entities">
+      <UniqueIdentifier>{23a03e87-3e57-4fc9-a2b1-187e01b1ecd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Entities">
+      <UniqueIdentifier>{0a5d752d-dff5-40ca-b309-cfa75d5bb9ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\Effects">
+      <UniqueIdentifier>{f00d284d-7402-4be5-88c3-8ffdf84d3b36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\Effects">
+      <UniqueIdentifier>{72bcb99a-b330-4cce-a5b3-ae4692e86e39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="JMMouseEventListener.cpp">
+      <Filter>My Independant Framwork\Source\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="JMKeyboardEventHandler.cpp">
+      <Filter>My Independant Framwork\Source\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="JMKeyboardEventListener.cpp">
+      <Filter>My Independant Framwork\Source\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="JMMouseEventHandler.cpp">
+      <Filter>My Independant Framwork\Source\Events\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="JMFrameEventHandler.cpp">
+      <Filter>My Independant Framwork\Source\Events\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="JMFrameEventListener.cpp">
+      <Filter>My Independant Framwork\Source\Events\Frame</Filter>
+    </ClCompile>
+    <ClCompile Include="JMEventHandler.cpp">
+      <Filter>My Independant Framwork\Source\Events\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="JMEventListener.cpp">
+      <Filter>My Independant Framwork\Source\Events\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="JMTimer.cpp">
+      <Filter>My Independant Framwork\Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreFrameEventHandler.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TanksMain.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreMain.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="EventLoop.cpp">
+      <Filter>Source Files\Game\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="NavigatableInterface.cpp">
+      <Filter>Source Files\Game\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="HUDElement.cpp">
+      <Filter>Source Files\Game\Interface\HUD Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuButton.cpp">
+      <Filter>Source Files\Game\Interface\HUD Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="StandardMenu.cpp">
+      <Filter>Source Files\Game\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="JMRandom.cpp">
+      <Filter>My Independant Framwork\Source\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="JMCircle.cpp">
+      <Filter>My Independant Framwork\Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="JMShape.cpp">
+      <Filter>My Independant Framwork\Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="JMRect.cpp">
+      <Filter>My Independant Framwork\Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="JMRay.cpp">
+      <Filter>My Independant Framwork\Source\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeCam.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Credits.cpp">
+      <Filter>Source Files\Game\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Collidable.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="CreditsDisplay.cpp">
+      <Filter>Source Files\Game\Interface\HUD Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="HPDisplay.cpp">
+      <Filter>Source Files\Game\Interface\HUD Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawner.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Destructable.cpp">
+      <Filter>Source Files\Game\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectsManager.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ShockBeam.cpp">
+      <Filter>Source Files\Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Explosion.cpp">
+      <Filter>Source Files\Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>Source Files\Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashScreen.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files\Game\Interface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JMFrameEventHandler.h">
+      <Filter>My Independant Framwork\Headers\Events\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="JMFrameEventListener.h">
+      <Filter>My Independant Framwork\Headers\Events\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="JMMouseEventListener.h">
+      <Filter>My Independant Framwork\Headers\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="JMKeyboardEventHandler.h">
+      <Filter>My Independant Framwork\Headers\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="JMKeyboardEventListener.h">
+      <Filter>My Independant Framwork\Headers\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="JMMouseEventHandler.h">
+      <Filter>My Independant Framwork\Headers\Events\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="JMEventHandler.h">
+      <Filter>My Independant Framwork\Headers\Events\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="JMEventListener.h">
+      <Filter>My Independant Framwork\Headers\Events\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="JMTimer.h">
+      <Filter>My Independant Framwork\Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreMain.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreFrameEventHandler.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TanksMain.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="HUDElement.h">
+      <Filter>Header Files\Game\Interface\HUD Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuButton.h">
+      <Filter>Header Files\Game\Interface\HUD Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="MathsMacros.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="NavigatableInterface.h">
+      <Filter>Header Files\Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="StandardMenu.h">
+      <Filter>Header Files\Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="EventLoop.h">
+      <Filter>Header Files\Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="JMRandom.h">
+      <Filter>My Independant Framwork\Headers\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="JMCircle.h">
+      <Filter>My Independant Framwork\Headers\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="JMShape.h">
+      <Filter>My Independant Framwork\Headers\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="JMRect.h">
+      <Filter>My Independant Framwork\Headers\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="JMRay.h">
+      <Filter>My Independant Framwork\Headers\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeCam.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Credits.h">
+      <Filter>Header Files\Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Collidable.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="CreditsDisplay.h">
+      <Filter>Header Files\Game\Interface\HUD Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="HPDisplay.h">
+      <Filter>Header Files\Game\Interface\HUD Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Destructable.h">
+      <Filter>Header Files\Game\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectsManager.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion.h">
+      <Filter>Header Files\Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="ShockBeam.h">
+      <Filter>Header Files\Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Header Files\Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreen.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Header Files\Game\Interface</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

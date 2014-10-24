@@ -1,0 +1,47 @@
+// === Inputs
+## IN position	POSITION
+## IN color		COLOR
+
+// === Outputs		
+## OUT DiffuseOut	0
+## OUT NormalOut	1
+
+// === Uniform
+## UNIFORM mat4 projViewModel PROJ_VIEW_MODEL_MATRIX
+
+## VERTEX
+// ===================================
+// ========== VERTEX SHADER ========== 
+#version 330
+
+in vec3 position;
+in vec3 color;
+
+out vec3 varColor;
+
+uniform mat4 projViewModel;
+
+void main()
+{
+	gl_Position = projViewModel * vec4(position, 1);
+	varColor = color;
+}
+
+## FRAGMENT
+// =====================================
+// ========== FRAGMENT SHADER ========== 
+#version 330
+
+in vec3 varColor;
+
+out vec4 DiffuseOut;
+out vec4 NormalOut;
+
+void main()
+{
+	DiffuseOut = vec4(varColor,1);
+	NormalOut = vec4(0,0,0,0);
+}
+
+
+

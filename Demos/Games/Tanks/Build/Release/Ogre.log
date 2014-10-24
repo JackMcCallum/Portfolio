@@ -1,0 +1,336 @@
+18:53:06: Creating resource group General
+18:53:06: Creating resource group Internal
+18:53:06: Creating resource group Autodetect
+18:53:06: SceneManagerFactory for type 'DefaultSceneManager' registered.
+18:53:06: Registering ResourceManager for type Material
+18:53:06: Registering ResourceManager for type Mesh
+18:53:06: Registering ResourceManager for type Skeleton
+18:53:06: MovableObjectFactory for type 'ParticleSystem' registered.
+18:53:06: OverlayElementFactory for type Panel registered.
+18:53:06: OverlayElementFactory for type BorderPanel registered.
+18:53:06: OverlayElementFactory for type TextArea registered.
+18:53:06: Registering ResourceManager for type Font
+18:53:06: ArchiveFactory for archive type FileSystem registered.
+18:53:06: ArchiveFactory for archive type Zip registered.
+18:53:06: ArchiveFactory for archive type EmbeddedZip registered.
+18:53:06: DDS codec registering
+18:53:06: FreeImage version: 3.15.3
+18:53:06: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+18:53:06: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,3fr,arw,bay,bmq,cap,cine,cr2,crw,cs1,dc2,dcr,drf,dsc,dng,erf,fff,ia,iiq,k25,kc2,kdc,mdc,mef,mos,mrw,nef,nrw,orf,pef,ptx,pxn,qtk,raf,raw,rdc,rw2,rwl,rwz,sr2,srf,srw,sti
+18:53:06: Registering ResourceManager for type HighLevelGpuProgram
+18:53:06: Registering ResourceManager for type Compositor
+18:53:06: MovableObjectFactory for type 'Entity' registered.
+18:53:06: MovableObjectFactory for type 'Light' registered.
+18:53:06: MovableObjectFactory for type 'BillboardSet' registered.
+18:53:06: MovableObjectFactory for type 'ManualObject' registered.
+18:53:06: MovableObjectFactory for type 'BillboardChain' registered.
+18:53:06: MovableObjectFactory for type 'RibbonTrail' registered.
+18:53:06: Loading library Plugins/RenderSystem_Direct3D9
+18:53:06: Installing plugin: D3D9 RenderSystem
+18:53:06: D3D9 : Direct3D9 Rendering Subsystem created.
+18:53:06: D3D9: Driver Detection Starts
+18:53:06: D3D9: Driver Detection Ends
+18:53:06: Plugin successfully installed
+18:53:06: Loading library Plugins/Plugin_ParticleFX
+18:53:06: Installing plugin: ParticleFX
+18:53:06: Particle Emitter Type 'Point' registered
+18:53:06: Particle Emitter Type 'Box' registered
+18:53:06: Particle Emitter Type 'Ellipsoid' registered
+18:53:06: Particle Emitter Type 'Cylinder' registered
+18:53:06: Particle Emitter Type 'Ring' registered
+18:53:06: Particle Emitter Type 'HollowEllipsoid' registered
+18:53:06: Particle Affector Type 'LinearForce' registered
+18:53:06: Particle Affector Type 'ColourFader' registered
+18:53:06: Particle Affector Type 'ColourFader2' registered
+18:53:06: Particle Affector Type 'ColourImage' registered
+18:53:06: Particle Affector Type 'ColourInterpolator' registered
+18:53:06: Particle Affector Type 'Scaler' registered
+18:53:06: Particle Affector Type 'Rotator' registered
+18:53:06: Particle Affector Type 'DirectionRandomiser' registered
+18:53:06: Particle Affector Type 'DeflectorPlane' registered
+18:53:06: Plugin successfully installed
+18:53:06: Loading library Plugins/Plugin_BSPSceneManager
+18:53:06: Installing plugin: BSP Scene Manager
+18:53:06: Plugin successfully installed
+18:53:06: Loading library Plugins/Plugin_CgProgramManager
+18:53:06: Installing plugin: Cg Program Manager
+18:53:06: Plugin successfully installed
+18:53:06: Loading library Plugins/Plugin_OctreeSceneManager
+18:53:06: Installing plugin: Octree Scene Manager
+18:53:06: Plugin successfully installed
+18:53:06: *-*-* OGRE Initialising
+18:53:06: *-*-* Version 1.8.1 (Byatis)
+18:53:06: CPU Identifier & Features
+18:53:06: -------------------------
+18:53:06:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz
+18:53:06:  *      SSE: yes
+18:53:06:  *     SSE2: yes
+18:53:06:  *     SSE3: yes
+18:53:06:  *      MMX: yes
+18:53:06:  *   MMXEXT: yes
+18:53:06:  *    3DNOW: no
+18:53:06:  * 3DNOWEXT: no
+18:53:06:  *     CMOV: yes
+18:53:06:  *      TSC: yes
+18:53:06:  *      FPU: yes
+18:53:06:  *      PRO: yes
+18:53:06:  *       HT: no
+18:53:06: -------------------------
+18:53:06: D3D9 : Subsystem Initialising
+18:53:06: Registering ResourceManager for type Texture
+18:53:06: Registering ResourceManager for type GpuProgram
+18:53:06: ***************************************
+18:53:06: *** D3D9 : Subsystem Initialised OK ***
+18:53:06: ***************************************
+18:53:06: D3D9RenderSystem::_createRenderWindow "Tanks", 1280x720 windowed  miscParams: FSAA=4 monitorIndex=0 vsync=0 
+18:53:06: D3D9 : Created D3D9 Rendering Window 'Tanks' : 1280x720, 32bpp
+18:53:06: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+18:53:06: D3D9: Vertex texture format supported - PF_A8R8G8B8
+18:53:06: D3D9: Vertex texture format supported - PF_B8G8R8A8
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+18:53:06: D3D9: Vertex texture format supported - PF_R8G8B8A8
+18:53:06: D3D9: Vertex texture format supported - PF_DEPTH
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT16_R
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT32_R
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+18:53:06: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+18:53:06: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+18:53:06: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+18:53:06: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+18:53:06: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+18:53:06: D3D9: Vertex texture format supported - PF_R8
+18:53:06: D3D9: Vertex texture format supported - PF_RG8
+18:53:06: RenderSystem capabilities
+18:53:06: -------------------------
+18:53:06: RenderSystem Name: Direct3D9 Rendering Subsystem
+18:53:06: GPU Vendor: nvidia
+18:53:06: Device Name: Monitor-1-NVIDIA GeForce GTX 660 Ti
+18:53:06: Driver Version: 9.18.13.3489
+18:53:06:  * Fixed function pipeline: yes
+18:53:06:  * Hardware generation of mipmaps: yes
+18:53:06:  * Texture blending: yes
+18:53:06:  * Anisotropic texture filtering: yes
+18:53:06:  * Dot product texture operation: yes
+18:53:06:  * Cube mapping: yes
+18:53:06:  * Hardware stencil buffer: yes
+18:53:06:    - Stencil depth: 8
+18:53:06:    - Two sided stencil support: yes
+18:53:06:    - Wrap stencil values: yes
+18:53:06:  * Hardware vertex / index buffers: yes
+18:53:06:  * Vertex programs: yes
+18:53:06:  * Number of floating-point constants for vertex programs: 256
+18:53:06:  * Number of integer constants for vertex programs: 16
+18:53:06:  * Number of boolean constants for vertex programs: 16
+18:53:06:  * Fragment programs: yes
+18:53:06:  * Number of floating-point constants for fragment programs: 224
+18:53:06:  * Number of integer constants for fragment programs: 16
+18:53:06:  * Number of boolean constants for fragment programs: 16
+18:53:06:  * Geometry programs: no
+18:53:06:  * Number of floating-point constants for geometry programs: 665
+18:53:06:  * Number of integer constants for geometry programs: 0
+18:53:06:  * Number of boolean constants for geometry programs: 0
+18:53:06:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+18:53:06:  * Texture Compression: yes
+18:53:06:    - DXT: yes
+18:53:06:    - VTC: no
+18:53:06:    - PVRTC: no
+18:53:06:  * Scissor Rectangle: yes
+18:53:06:  * Hardware Occlusion Query: yes
+18:53:06:  * User clip planes: yes
+18:53:06:  * VET_UBYTE4 vertex element type: yes
+18:53:06:  * Infinite far plane projection: yes
+18:53:06:  * Hardware render-to-texture: yes
+18:53:06:  * Floating point textures: yes
+18:53:06:  * Non-power-of-two textures: yes
+18:53:06:  * Volume textures: yes
+18:53:06:  * Multiple Render Targets: 4
+18:53:06:    - With different bit depths: yes
+18:53:06:  * Point Sprites: yes
+18:53:06:  * Extended point parameters: yes
+18:53:06:  * Max Point Size: 8192
+18:53:06:  * Vertex texture fetch: yes
+18:53:06:  * Number of world matrices: 0
+18:53:06:  * Number of texture units: 8
+18:53:06:  * Stencil buffer depth: 8
+18:53:06:  * Number of vertex blend matrices: 0
+18:53:06:    - Max vertex textures: 4
+18:53:06:    - Vertex textures shared: no
+18:53:06:  * Render to Vertex Buffer : no
+18:53:06:  * DirectX per stage constants: yes
+18:53:06: DefaultWorkQueue('Root') initialising on thread 003EB290.
+18:53:07: Particle Renderer Type 'billboard' registered
+18:53:07: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F098 starting.
+18:53:07: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F518 starting.
+18:53:07: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F128 starting.
+18:53:07: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F1E8 starting.
+18:53:07: SceneManagerFactory for type 'BspSceneManager' registered.
+18:53:07: Registering ResourceManager for type BspLevel
+18:53:07: SceneManagerFactory for type 'OctreeSceneManager' registered.
+18:53:07: Creating resource group Splash
+18:53:07: Added resource location '../../Assets/Splash/' of type 'FileSystem' to resource group 'Splash'
+18:53:07: Initialising resource group Splash
+18:53:07: Parsing scripts for resource group Splash
+18:53:07: Parsing script SplashScreen.material
+18:53:07: Finished parsing scripts for resource group Splash
+18:53:07: Creating resources for group Splash
+18:53:07: All done
+18:53:07: Loading resource group 'Splash' - Resources: 1 World Geometry: 1
+18:53:07: Texture: SplashScreen.png: Loading 1 faces(PF_A8R8G8B8,1024x1024x1) Internal format is PF_A8R8G8B8,1024x1024x1.
+18:53:07: Finished loading resource group Splash
+18:53:07: Added resource location '../../Assets/Materials' of type 'FileSystem' to resource group 'General'
+18:53:07: Added resource location '../../Assets/Models' of type 'FileSystem' to resource group 'General'
+18:53:07: Added resource location '../../Assets/Textures' of type 'FileSystem' to resource group 'General'
+18:53:07: Added resource location '../../Assets/Misc' of type 'FileSystem' to resource group 'General'
+18:53:07: Initialising resource group General
+18:53:07: Parsing scripts for resource group General
+18:53:07: Parsing script BackgroundPlane.material
+18:53:07: Parsing script Bloom.material
+18:53:07: Parsing script GameMats.material
+18:53:07: Parsing script MenuMats.material
+18:53:07: Parsing script Bloom.compositor
+18:53:07: Finished parsing scripts for resource group General
+18:53:07: Creating resources for group General
+18:53:07: All done
+18:53:07: Loading resource group 'General' - Resources: 1 World Geometry: 1
+18:53:07: Texture: GridTex.png: Loading 1 faces(PF_R8G8B8,1024x1024x1) Internal format is PF_X8R8G8B8,1024x1024x1.
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture DirtyLens.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture DirtyLens.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture DirtyLens.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource DirtyLens.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource BrickN.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture BrickN.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource BrickN.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Texture: WallAO.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+18:53:07: Texture: EnemyAO.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+18:53:07: Texture: TreeAO.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+18:53:07: Texture: TankAO.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+18:53:07: Texture: SpawnerAO.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource white.dds in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture white.dds. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource white.dds in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Texture: LightningTex.png: Loading 1 faces(PF_A8R8G8B8,128x128x1) Internal format is PF_A8R8G8B8,128x128x1.
+18:53:07: Texture: ShockTex.png: Loading 1 faces(PF_R8G8B8,512x512x1) Internal format is PF_X8R8G8B8,512x512x1.
+18:53:07: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ExplodeTex.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Error loading texture ExplodeTex.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ExplodeTex.png in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+18:53:07: Texture: MenuItemTexture.png: Loading 1 faces(PF_A8R8G8B8,8x8x1) Internal format is PF_A8R8G8B8,8x8x1.
+18:53:07: Finished loading resource group General
+18:53:07: Font MenuFont using texture size 1024x512
+18:53:07: Info: Freetype returned null for character 127 in font MenuFont
+18:53:07: Info: Freetype returned null for character 128 in font MenuFont
+18:53:07: Info: Freetype returned null for character 129 in font MenuFont
+18:53:07: Info: Freetype returned null for character 130 in font MenuFont
+18:53:07: Info: Freetype returned null for character 131 in font MenuFont
+18:53:07: Info: Freetype returned null for character 132 in font MenuFont
+18:53:07: Info: Freetype returned null for character 133 in font MenuFont
+18:53:07: Info: Freetype returned null for character 134 in font MenuFont
+18:53:07: Info: Freetype returned null for character 135 in font MenuFont
+18:53:07: Info: Freetype returned null for character 136 in font MenuFont
+18:53:07: Info: Freetype returned null for character 137 in font MenuFont
+18:53:07: Info: Freetype returned null for character 138 in font MenuFont
+18:53:07: Info: Freetype returned null for character 139 in font MenuFont
+18:53:07: Info: Freetype returned null for character 140 in font MenuFont
+18:53:07: Info: Freetype returned null for character 141 in font MenuFont
+18:53:07: Info: Freetype returned null for character 142 in font MenuFont
+18:53:07: Info: Freetype returned null for character 143 in font MenuFont
+18:53:07: Info: Freetype returned null for character 144 in font MenuFont
+18:53:07: Info: Freetype returned null for character 145 in font MenuFont
+18:53:07: Info: Freetype returned null for character 146 in font MenuFont
+18:53:07: Info: Freetype returned null for character 147 in font MenuFont
+18:53:07: Info: Freetype returned null for character 148 in font MenuFont
+18:53:07: Info: Freetype returned null for character 149 in font MenuFont
+18:53:07: Info: Freetype returned null for character 150 in font MenuFont
+18:53:07: Info: Freetype returned null for character 151 in font MenuFont
+18:53:07: Info: Freetype returned null for character 152 in font MenuFont
+18:53:07: Info: Freetype returned null for character 153 in font MenuFont
+18:53:07: Info: Freetype returned null for character 154 in font MenuFont
+18:53:07: Info: Freetype returned null for character 155 in font MenuFont
+18:53:07: Info: Freetype returned null for character 156 in font MenuFont
+18:53:07: Info: Freetype returned null for character 157 in font MenuFont
+18:53:07: Info: Freetype returned null for character 158 in font MenuFont
+18:53:07: Info: Freetype returned null for character 159 in font MenuFont
+18:53:07: Info: Freetype returned null for character 160 in font MenuFont
+18:53:07: Texture: MenuFontTexture: Loading 1 faces(PF_BYTE_LA,1024x512x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,1024x512x1.
+18:53:07: Font HUDFont using texture size 512x512
+18:53:07: Info: Freetype returned null for character 127 in font HUDFont
+18:53:07: Info: Freetype returned null for character 128 in font HUDFont
+18:53:07: Info: Freetype returned null for character 129 in font HUDFont
+18:53:07: Info: Freetype returned null for character 130 in font HUDFont
+18:53:07: Info: Freetype returned null for character 131 in font HUDFont
+18:53:07: Info: Freetype returned null for character 132 in font HUDFont
+18:53:07: Info: Freetype returned null for character 133 in font HUDFont
+18:53:07: Info: Freetype returned null for character 134 in font HUDFont
+18:53:07: Info: Freetype returned null for character 135 in font HUDFont
+18:53:07: Info: Freetype returned null for character 136 in font HUDFont
+18:53:07: Info: Freetype returned null for character 137 in font HUDFont
+18:53:07: Info: Freetype returned null for character 138 in font HUDFont
+18:53:07: Info: Freetype returned null for character 139 in font HUDFont
+18:53:07: Info: Freetype returned null for character 140 in font HUDFont
+18:53:07: Info: Freetype returned null for character 141 in font HUDFont
+18:53:07: Info: Freetype returned null for character 142 in font HUDFont
+18:53:07: Info: Freetype returned null for character 143 in font HUDFont
+18:53:07: Info: Freetype returned null for character 144 in font HUDFont
+18:53:07: Info: Freetype returned null for character 145 in font HUDFont
+18:53:07: Info: Freetype returned null for character 146 in font HUDFont
+18:53:07: Info: Freetype returned null for character 147 in font HUDFont
+18:53:07: Info: Freetype returned null for character 148 in font HUDFont
+18:53:07: Info: Freetype returned null for character 149 in font HUDFont
+18:53:07: Info: Freetype returned null for character 150 in font HUDFont
+18:53:07: Info: Freetype returned null for character 151 in font HUDFont
+18:53:07: Info: Freetype returned null for character 152 in font HUDFont
+18:53:07: Info: Freetype returned null for character 153 in font HUDFont
+18:53:07: Info: Freetype returned null for character 154 in font HUDFont
+18:53:07: Info: Freetype returned null for character 155 in font HUDFont
+18:53:07: Info: Freetype returned null for character 156 in font HUDFont
+18:53:07: Info: Freetype returned null for character 157 in font HUDFont
+18:53:07: Info: Freetype returned null for character 158 in font HUDFont
+18:53:07: Info: Freetype returned null for character 159 in font HUDFont
+18:53:07: Info: Freetype returned null for character 160 in font HUDFont
+18:53:07: Texture: HUDFontTexture: Loading 1 faces(PF_BYTE_LA,512x512x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,512x512x1.
+18:53:07: Unloading resource group Splash
+18:53:07: Finished unloading resource group Splash
+18:53:08: Mesh: Loading BackgroundPlane.mesh.
+18:53:08: Can't assign material _missing_material_ to SubEntity of Ogre/MO1 because this Material does not exist. Have you forgotten to define it in a .material script?
+18:53:08: Mesh: Loading Tank_Body.mesh.
+18:53:08: Mesh: Loading Tank_Gun.mesh.
+18:53:08: Mesh: Loading WallTower.mesh.
+18:53:08: Mesh: Loading WallSection.mesh.
+18:53:08: Mesh: Loading Spawner.mesh.
+18:53:08: Texture: spot_shadow_fade.png: Loading 1 faces(PF_R8G8B8,128x128x1) Internal format is PF_X8R8G8B8,128x128x1.
+18:53:12: Mesh: Loading Enemy.mesh.
+18:54:28: Can't assign material _missing_material_ to SubEntity of Ogre/MO1764 because this Material does not exist. Have you forgotten to define it in a .material script?
+18:55:17: Can't assign material _missing_material_ to SubEntity of Ogre/MO2209 because this Material does not exist. Have you forgotten to define it in a .material script?
+18:56:00: DefaultWorkQueue('Root') shutting down on thread 003EB290.
+18:56:00: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F518 stopped.
+18:56:00: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F128 stopped.
+18:56:00: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F1E8 stopped.
+18:56:00: DefaultWorkQueue('Root')::WorkerFunc - thread 0458F098 stopped.
+18:56:00: Unregistering ResourceManager for type BspLevel
+18:56:00: *-*-* OGRE Shutdown
+18:56:00: Unregistering ResourceManager for type Compositor
+18:56:00: Unregistering ResourceManager for type Font
+18:56:00: Unregistering ResourceManager for type Skeleton
+18:56:00: Unregistering ResourceManager for type Mesh
+18:56:00: Unregistering ResourceManager for type HighLevelGpuProgram
+18:56:00: Uninstalling plugin: Octree Scene Manager
+18:56:00: Plugin successfully uninstalled
+18:56:00: Unloading library Plugins/Plugin_OctreeSceneManager
+18:56:00: Uninstalling plugin: Cg Program Manager
+18:56:00: Plugin successfully uninstalled
+18:56:00: Unloading library Plugins/Plugin_CgProgramManager
+18:56:00: Uninstalling plugin: BSP Scene Manager
+18:56:00: Plugin successfully uninstalled
+18:56:00: Unloading library Plugins/Plugin_BSPSceneManager
+18:56:00: Uninstalling plugin: ParticleFX
+18:56:00: Plugin successfully uninstalled
+18:56:00: Unloading library Plugins/Plugin_ParticleFX
+18:56:00: Uninstalling plugin: D3D9 RenderSystem
+18:56:00: D3D9 : Shutting down cleanly.
+18:56:00: Unregistering ResourceManager for type Texture
+18:56:00: Unregistering ResourceManager for type GpuProgram
+18:56:00: D3D9 : Direct3D9 Rendering Subsystem destroyed.
+18:56:00: Plugin successfully uninstalled
+18:56:00: Unloading library Plugins/RenderSystem_Direct3D9
+18:56:00: Unregistering ResourceManager for type Material

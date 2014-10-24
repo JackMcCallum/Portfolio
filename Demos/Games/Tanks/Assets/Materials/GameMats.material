@@ -1,0 +1,182 @@
+
+material Mat_Wall
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1
+			diffuse 0.5 0.5 0.5
+			specular 1 1 1 16
+			
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture WallAO.png
+			}
+		}
+	}
+}
+
+material Mat_Enemy
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 0.5 0.4 1
+            diffuse 1 0.5 0.4 1
+			specular 1 0.5 0.4 4
+			emissive 0.6 0.2 0.1 4
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture EnemyAO.png
+			}
+		}
+	}
+}
+
+material Mat_Tree
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+            diffuse 0.5 0.5 0.5
+			specular 1 1 1 8
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture TreeAO.png
+			}
+		}
+	}
+}
+
+material Mat_Tank
+{
+	technique
+	{
+		pass
+		{
+			
+			ambient 0.5 0.4 1 1
+            diffuse 0.5 0.4 1 1
+			specular 0.5 0.4 1 4
+			emissive 0.1 0.2 0.6 4
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture TankAO.png
+			}
+		}
+	}
+}
+
+material Mat_Spawner
+{
+	technique
+	{
+		pass
+		{
+			ambient 1 1 1 1
+            diffuse 0.7 0.7 0.7
+			specular 0.7 0.7 0.7 16
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture SpawnerAO.png
+			}
+		}
+	}
+}
+
+material Mat_SpawnerIndicator
+{
+	technique
+	{
+		pass
+		{
+			ambient 0 0 0
+            diffuse 0 0 0
+			specular 1 1 1 8
+			emissive 1 3 1 1
+			
+			shading phong
+			
+			texture_unit
+			{
+				texture white.dds
+			}
+		}
+	}
+}
+
+
+material Mat_Lightning
+{
+	technique
+	{
+		pass
+		{
+		lighting off
+			depth_write off
+			scene_blend add
+			
+			texture_unit
+			{
+				texture LightningTex.png
+			}
+		}
+	}
+}
+
+material Mat_Shock
+{
+	technique
+	{
+		pass
+		{
+		lighting off
+			depth_write off
+			depth_check off
+			scene_blend add
+			
+			texture_unit
+			{
+				texture ShockTex.png
+			}
+		}
+	}
+}
+
+material Mat_Explode
+{
+	technique
+	{
+		pass
+		{
+		lighting off
+			depth_write off
+			depth_check off
+			scene_blend add
+			
+			texture_unit
+			{
+				texture ExplodeTex.png
+			}
+		}
+	}
+}

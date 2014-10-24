@@ -1,0 +1,46 @@
+// === Inputs
+## IN position	POSITION
+## IN texcoord	TEXCOORD0
+## IN color	COLOR
+
+// === Uniform
+## UNIFORM mat4 projViewModel PROJ_VIEW_MODEL_MATRIX
+## UNIFORM sampler2D textureMap TEXTURE_UNIT0
+
+## VERTEX
+// ===================================
+// ========== VERTEX SHADER ========== 
+#version 330
+
+in vec3 position;
+in vec2 texcoord;
+in vec3 color;
+
+out vec2 varTexCoord;
+out vec3 varColor;
+
+uniform mat4 projViewModel;
+
+void main()
+{
+	gl_Position = projViewModel * vec4(position, 1);
+	varTexCoord = texcoord;
+	varColor = color;
+}
+
+## FRAGMENT
+// =====================================
+// ========== FRAGMENT SHADER ========== 
+#version 330
+
+in vec2 varTexCoord;
+in vec3 varColor;
+
+out vec4 outColor;
+
+uniform sampler2D textureMap;
+
+void main()
+{
+	outColor = texture(textureMap, varTexCoord) * vec4(varColor,1);
+}

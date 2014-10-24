@@ -1,0 +1,213 @@
+// Quad Render Vertex Program
+vertex_program QuadVP cg
+{
+	source Bloom.cg
+	entry_point QuadVP
+	profiles vs_1_1
+
+	default_params
+	{
+		param_named_auto worldViewProj worldviewproj_matrix
+	}
+}
+
+fragment_program Blur cg
+{
+	source Bloom.cg
+	entry_point Blur
+	profiles ps_3_0
+}
+
+fragment_program Filter cg
+{
+	source Bloom.cg
+	entry_point Filter
+	profiles ps_3_0
+}
+
+fragment_program OpticFilter cg
+{
+	source Bloom.cg
+	entry_point OpticFilter
+	profiles ps_3_0
+}
+
+fragment_program Blend cg
+{
+	source Bloom.cg
+	entry_point Blend
+	profiles ps_3_0
+}
+
+
+material BlurTemplate
+{
+	set $BlurParams "1 0 5 5"
+
+    technique 
+	{
+		pass
+		{
+			vertex_program_ref QuadVP { }
+
+			fragment_program_ref Blur 
+			{
+				param_named blurParams float4 $BlurParams
+			}
+
+			texture_unit
+			{
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Blur_WeakHorizontal : BlurTemplate
+{
+	set $BlurParams "1 0 5 5"
+}
+
+material Blur_WeakVertical : BlurTemplate
+{
+	set $BlurParams "0 1 5 5"
+}
+
+material Blur_StrongHorizontal : BlurTemplate
+{
+	set $BlurParams "1 0 25 25"
+}
+
+material Blur_StrongVertical : BlurTemplate
+{
+	set $BlurParams "0 1 25 25"
+}
+
+material FilterTemplate
+{
+	// Color Bias, 
+	set $FilterParams "0.4 4 1.5 5"
+
+    technique 
+	{
+		pass
+		{
+			vertex_program_ref QuadVP { }
+
+			fragment_program_ref Filter 
+			{
+				param_named filterParams float4 $FilterParams
+			}
+
+			texture_unit
+			{
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Filter_Bloom : FilterTemplate
+{
+	set $FilterParams "0.5 4 2"
+}
+
+material OpticFilterTemplate
+{
+	// Color Bias, 
+	set $FilterParams "0.4 4 1.5 5"
+
+    technique 
+	{
+		pass
+		{
+			vertex_program_ref QuadVP { }
+
+			fragment_program_ref OpticFilter 
+			{
+				param_named filterParams float4 $FilterParams
+			}
+
+			texture_unit
+			{
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Filter_OpticFlare : OpticFilterTemplate
+{
+	set $FilterParams "0.9 16 10"
+}
+
+material BlendTemplate
+{
+	// Color Bias, 
+	set $BlendParams "0.5 1 1 1"
+
+    technique 
+	{
+		pass
+		{
+			vertex_program_ref QuadVP { }
+
+			fragment_program_ref Blend 
+			{
+				param_named blendParams float4 $BlendParams
+			}
+
+			texture_unit
+			{
+				tex_address_mode clamp
+			}
+
+			texture_unit
+			{
+				tex_address_mode clamp
+			}
+			
+			texture_unit
+			{
+				texture DirtyLens.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Blend_Bloom : BlendTemplate
+{
+	set $BlendParams "1 1 1 1"
+}
+
+material Blend_OpticFlare : BlendTemplate
+{
+	set $BlendParams "0.5 1 1 1"
+}
+
+
+fragment_program MRTTest cg
+{
+	source Bloom.cg
+	entry_point MRTTest
+	profiles ps_3_0
+}
+
+material BaseCompositeMaterial
+{
+    technique 
+	{
+		pass
+		{
+			vertex_program_ref QuadVP { }
+			fragment_program_ref MRTTest { }
+
+			texture_unit
+			{
+				tex_address_mode clamp
+				texture BrickN.png
+			}
+		}
+	}
+}

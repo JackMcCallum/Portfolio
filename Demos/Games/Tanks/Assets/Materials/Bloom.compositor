@@ -1,0 +1,220 @@
+compositor Bloom
+{
+    technique
+    {
+		texture TargetOutput target_width target_height PF_R8G8B8
+		texture TargetBlur0 target_width_scaled 0.5 target_height_scaled 0.5 PF_R8G8B8
+		texture TargetBlur1 target_width_scaled 0.5 target_height_scaled 0.5 PF_R8G8B8
+
+        target TargetOutput 
+		{
+            input previous
+        }
+
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Filter_Bloom
+				input 0 TargetOutput
+            }
+		}
+
+		target TargetBlur1
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakHorizontal
+				input 0 TargetBlur0
+            }
+		}
+		
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakVertical
+				input 0 TargetBlur1
+            }
+		}
+
+		target TargetBlur1
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_StrongHorizontal
+				input 0 TargetBlur0
+            }
+		}
+
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_StrongVertical
+				input 0 TargetBlur1
+            }
+		}
+
+		target_output
+        {
+            input none
+            
+            pass render_quad
+            {
+                material Blend_Bloom
+				input 0 TargetBlur0
+				input 1 TargetOutput
+            }
+        }
+    }
+}
+
+compositor OpticFlare
+{
+    technique
+    {
+		texture TargetOutput target_width target_height PF_R8G8B8
+		texture TargetBlur0 target_width_scaled 0.25 target_height_scaled 0.25 PF_R8G8B8
+		texture TargetBlur1 target_width_scaled 0.25 target_height_scaled 0.25 PF_R8G8B8
+		
+		target TargetOutput 
+		{
+            input previous
+        }
+
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Filter_OpticFlare
+				input 0 TargetOutput
+            }
+		}
+
+		target TargetBlur1
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakHorizontal
+				input 0 TargetBlur0
+            }
+		}
+		
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakVertical
+				input 0 TargetBlur1
+            }
+		}
+
+		target TargetBlur1
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_StrongHorizontal
+				input 0 TargetBlur0
+            }
+		}
+
+		target TargetBlur0
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_StrongVertical
+				input 0 TargetBlur1
+            }
+		}
+
+		target_output
+        {
+            input none
+            
+            pass render_quad
+            {
+                material Blend_OpticFlare
+				input 0 TargetBlur0
+				input 1 TargetOutput
+            }
+        }
+    }
+}
+
+compositor Blur
+{
+    technique
+    {
+		texture TargetOutput target_width target_height PF_R8G8B8
+		texture TargetBlur0 target_width_scaled 0. target_height_scaled 0.5 PF_R8G8B8
+		texture TargetBlur1 target_width_scaled 0.5 target_height_scaled 0.5 PF_R8G8B8
+
+        target TargetOutput 
+		{
+            input previous
+        }
+
+		target TargetBlur1
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakHorizontal
+				input 0 TargetOutput
+            }
+		}
+		
+		target_output
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakVertical
+				input 0 TargetBlur1
+            }
+		}
+    }
+}
+
+compositor TestComposite
+{
+    technique
+    {
+		texture TargetData target_width target_height PF_R8G8B8
+
+        target TargetData 
+		{
+            input none
+			
+			pass clear
+            {
+            }
+			
+			pass render_scene
+			{
+				material_scheme Data
+			}
+        }
+		
+		target_output
+		{
+			input none
+			pass render_quad
+            {
+                material Blur_WeakVertical
+				input 0 TargetData
+            }
+		}
+    }
+}

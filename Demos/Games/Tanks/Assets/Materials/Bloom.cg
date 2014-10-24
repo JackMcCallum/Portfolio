@@ -1,0 +1,115 @@
+static const float Alpha[11] =
+{
+0.01222447,
+0.02783468,
+0.06559061,
+0.12097757,
+0.17466632,
+
+0.19741265,
+
+0.17466632,
+0.12097757,
+0.06559061,
+0.02783468,
+0.01222447
+};
+
+static const float Position[11] =
+{
+-5,
+-4,
+-3,
+-2,
+-1,
+
+ 0,
+ 
+ 1,
+ 2,
+ 3,
+ 4,
+ 5
+};
+
+float4 Blur(
+	float2 UV 	 		 :TEXCOORD0,
+	uniform sampler2D RT :TEXUNIT0,
+	uniform float4 blurParams) :COLOR 
+{
+	float2 vect = (blurParams.xy / float2(1920, 1080)) * blurParams.zw;
+
+
+	float4 Color = 0;
+	for (int i=0; i<11; i++) 
+	{
+		Color += tex2D(RT, UV + vect*Position[i]) * Alpha[i];
+	}
+	
+	return Color;
+}
+
+float4 Filter(
+	float2 UV 	 		 :TEXCOORD0,
+	uniform sampler2D RT :TEXUNIT0,
+	uniform float4 filterParams) :COLOR 
+{
+	float4 Color = tex2D(RT, UV);
+	Color -= filterParams.x;
+	Color = max(float4(0,0,0,0), Color);
+	Color *= filterParams.z;
+	Color = pow(Color,filterParams.y);
+	
+
+	return Color;
+}
+
+float4 OpticFilter(
+	float2 UV 	 		 :TEXCOORD0,
+	uniform sampler2D RT :TEXUNIT0,
+	uniform float4 filterParams) :COLOR 
+{
+	float4 Color = tex2D(RT, 1 - UV);
+	float Shade = (Color.r + Color.g + Color.b) / 3;
+	Shade -= filterParams.x;
+	Shade *= filterParams.z;
+	Shade = max(0, Shade);
+	Shade = pow(Shade,filterParams.y);
+
+	return float4(Shade * Color.rgb * float3(0.5,0.5,1), 1);
+}
+
+float4 MRTTest(
+	float2 UV 	 		 :TEXCOORD0,
+	uniform sampler2D RT :TEXUNIT0) :COLOR 
+{
+	return tex2D(RT, UV);
+}
+
+float4 Blend(
+	float2 UV 	 		  :TEXCOORD0,
+	uniform sampler2D RT0 :TEXUNIT0,
+	uniform sampler2D RT1 :TEXUNIT1,
+	uniform sampler2D LensMask :TEXUNIT2,
+	uniform float4 blendParams) :COLOR 
+{
+	float4 Color0 = tex2D(RT0, UV);// * tex2D(LensMask, UV);
+	float4 Color1 = tex2D(RT1, UV);
+
+	float4 Color = (Color0 * blendParams.r) + (Color1 * blendParams.g);
+	return float4(Color.rgb * blendParams.b,1);
+}
+
+void QuadVP(
+    in float4 InPos : POSITION,
+    out float4 Pos  : POSITION,
+    out float2 UV   : TEXCOORD0,
+	uniform float4x4 worldViewProj)
+{
+	Pos = mul(worldViewProj, InPos);
+	InPos.xy = sign(InPos.xy);
+	UV = (float2(InPos.x, -InPos.y) + 1.0) * 0.5;
+}
+	
+	
+	

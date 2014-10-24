@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Collidable.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="CreditsDisplay.cpp" />
+    <ClCompile Include="Destructable.cpp" />
+    <ClCompile Include="Effect.cpp" />
+    <ClCompile Include="EffectsManager.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EventLoop.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="FreeCam.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="HPDisplay.cpp" />
+    <ClCompile Include="HUDElement.cpp" />
+    <ClCompile Include="JMCircle.cpp" />
+    <ClCompile Include="JMEventHandler.cpp" />
+    <ClCompile Include="JMEventListener.cpp" />
+    <ClCompile Include="JMFrameEventHandler.cpp" />
+    <ClCompile Include="JMFrameEventListener.cpp" />
+    <ClCompile Include="JMRandom.cpp" />
+    <ClCompile Include="JMRay.cpp" />
+    <ClCompile Include="JMRect.cpp" />
+    <ClCompile Include="JMShape.cpp" />
+    <ClCompile Include="JMTimer.cpp" />
+    <ClCompile Include="JMKeyboardEventHandler.cpp" />
+    <ClCompile Include="JMKeyboardEventListener.cpp" />
+    <ClCompile Include="JMMouseEventHandler.cpp" />
+    <ClCompile Include="JMMouseEventListener.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="NavigatableInterface.cpp" />
+    <ClCompile Include="OgreFrameEventHandler.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OgreMain.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ShockBeam.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="StandardMenu.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TanksMain.cpp" />
+    <ClCompile Include="Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Collidable.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="Credits.h" />
+    <ClInclude Include="CreditsDisplay.h" />
+    <ClInclude Include="Destructable.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="EffectsManager.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EventLoop.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="FreeCam.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="HPDisplay.h" />
+    <ClInclude Include="HUDElement.h" />
+    <ClInclude Include="JMCircle.h" />
+    <ClInclude Include="JMEventHandler.h" />
+    <ClInclude Include="JMEventListener.h" />
+    <ClInclude Include="JMFrameEventHandler.h" />
+    <ClInclude Include="JMFrameEventListener.h" />
+    <ClInclude Include="JMRandom.h" />
+    <ClInclude Include="JMRay.h" />
+    <ClInclude Include="JMRect.h" />
+    <ClInclude Include="JMShape.h" />
+    <ClInclude Include="JMTimer.h" />
+    <ClInclude Include="JMKeyboardEventHandler.h" />
+    <ClInclude Include="JMKeyboardEventListener.h" />
+    <ClInclude Include="JMMouseEventHandler.h" />
+    <ClInclude Include="JMMouseEventListener.h" />
+    <ClInclude Include="MathsMacros.h" />
+    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="NavigatableInterface.h" />
+    <ClInclude Include="OgreFrameEventHandler.h" />
+    <ClInclude Include="OgreMain.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="ShockBeam.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="StandardMenu.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TanksMain.h" />
+    <ClInclude Include="Wall.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C59DF701-6E1C-4471-884A-92CCDAB938A5}</ProjectGuid>
+    <RootNamespace>Tanks</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\Bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Ogre3D\include\;$(SolutionDir)..\Ogre3D\boost\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalOptions>/Zm161 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Ogre3D\lib\$(Configuration)\;$(SolutionDir)..\Ogre3D\boost\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Ogre3D\include\;$(SolutionDir)..\Ogre3D\boost\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalOptions>/Zm161 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Ogre3D\lib\$(Configuration)\;$(SolutionDir)..\Ogre3D\boost\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>
+      </SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

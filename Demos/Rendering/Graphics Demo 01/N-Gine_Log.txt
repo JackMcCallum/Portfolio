@@ -1,0 +1,16 @@
+OpenGL version: 4.4.0
+Failed to load texture: ./Data/Textures/GlowMap.png
+Textures loaded: 685
+
+
+Failed trying to add uniform: itviewMatrix
+Failed trying to add uniform: surfaceDiffuse
+Failed trying to add uniform: surfaceSpecular
+
+
+
+
+
+Failed trying to add uniform: paramData
+Shaders loaded: 66
+Models loaded: 104

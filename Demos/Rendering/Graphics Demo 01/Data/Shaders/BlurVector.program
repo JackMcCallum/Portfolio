@@ -1,0 +1,81 @@
+// === Inputs
+## IN inPosition	POSITION
+
+// === Uniform
+## UNIFORM sampler2D textureMap TEXTURE_UNIT0
+## UNIFORM vec4 paramData MANUAL0
+
+## VERTEX
+// ========== VERTEX SHADER ========== 
+#version 330
+
+in vec3 inPosition;
+out vec2 varTexCoord;
+
+void main()
+{
+	gl_Position = vec4(inPosition, 1);
+	varTexCoord = inPosition.xy*0.5+0.5;
+}
+
+## FRAGMENT
+// ========== FRAGMENT SHADER ========== 
+#version 330
+
+in vec2 varTexCoord;
+out vec4 outColor;
+uniform sampler2D textureMap;
+
+// ResX/ResY/Mul offsetX/Mul offsetY
+uniform vec4 paramData;
+
+const float sampMult[15] = float[]
+(
+	0.0192,
+	0.0376,
+	0.0547,
+	0.0696,
+	0.0818,
+	0.0909,
+	0.0965,
+	0.0984,
+	0.0965,
+	0.0909,
+	0.0818,
+	0.0696,
+	0.0547,
+	0.0376,
+	0.0192
+);
+
+const float sampOffset[15] = float[]
+(
+	-7,
+	-6,
+	-5,
+	-4,
+	-3,
+	-2,
+	-1,
+	0,
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7
+);
+
+const int numSamples = 15;
+
+void main()
+{
+	vec4 color = vec4(0,0,0,0);
+	for (int i=0; i<numSamples; i++)
+		color += texture(textureMap, varTexCoord + vec2((sampOffset[i]/paramData.x)*paramData.z, (sampOffset[i]/paramData.y)*paramData.w)) * sampMult[i];
+	outColor = color;
+}
+
+
+

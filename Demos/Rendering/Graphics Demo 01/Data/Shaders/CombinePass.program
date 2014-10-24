@@ -1,0 +1,41 @@
+// === Inputs
+## IN inPosition	POSITION
+
+// === Uniform
+## UNIFORM sampler2D textureMap TEXTURE_UNIT0
+## UNIFORM sampler2D volumeMap TEXTURE_UNIT1
+## UNIFORM sampler2D glowMap TEXTURE_UNIT2
+## UNIFORM vec4 paramData MANUAL0
+
+## VERTEX
+// ========== VERTEX SHADER ========== 
+#version 330
+
+in vec3 inPosition;
+out vec2 varTexCoord;
+
+void main()
+{
+	gl_Position = vec4(inPosition, 1);
+	varTexCoord = inPosition.xy*0.5+0.5;
+}
+
+## FRAGMENT
+// ========== FRAGMENT SHADER ========== 
+#version 330
+
+in vec2 varTexCoord;
+out vec4 outColor;
+uniform sampler2D textureMap;
+uniform sampler2D volumeMap;
+uniform sampler2D glowMap;
+
+uniform vec4 paramData;
+
+void main()
+{
+	outColor = texture(textureMap, varTexCoord) + texture(volumeMap, varTexCoord) + texture(glowMap, varTexCoord);
+}
+
+
+

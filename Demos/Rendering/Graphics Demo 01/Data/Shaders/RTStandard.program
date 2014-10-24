@@ -1,0 +1,149 @@
+// === Inputs
+## IN inPosition	POSITION
+## IN inColor		COLOR
+## IN inNormal		NORMAL
+## IN inTangent		TANGENT
+## IN inTexCoord	TEXCOORD0
+
+## OUT outColor0 0
+## OUT outColor1 1
+## OUT outColor2 2
+
+// === Uniform
+## UNIFORM mat4 projViewModelMatrix PROJ_VIEW_MODEL_MATRIX
+## UNIFORM mat4 modelMatrix MODEL_MATRIX
+## UNIFORM mat3 normalMatrix NORMAL_MATRIX
+## UNIFORM mat3 itviewMatrix VIEW_MATRIX
+
+## UNIFORM vec4 surfaceDiffuse 	DIFFUSE
+## UNIFORM vec4 surfaceSpecular SPECULAR
+## UNIFORM vec4 surfaceAmbient  AMBIENT
+## UNIFORM vec3 cameraPosition  MANUAL0
+
+## UNIFORM vec4 lightPosition LIGHT_POSITION
+## UNIFORM vec3 lightColor LIGHT_COLOR
+
+## UNIFORM sampler2D diffuseMap TEXTURE_UNIT0
+## UNIFORM sampler2D normalMap	TEXTURE_UNIT1
+## UNIFORM sampler2D specMap	TEXTURE_UNIT2
+## UNIFORM sampler2D glowMap	TEXTURE_UNIT3
+
+## VERTEX
+// ===================================
+// ========== VERTEX SHADER ========== 
+#version 330
+
+in vec3 inPosition;
+in vec2 inTexCoord;
+in vec3 inNormal;
+in vec3 inTangent;
+in vec3 inColor;
+
+out vec3 varColor;
+out vec3 varNormal;
+out vec3 varTangent;
+out vec3 varBinormal;
+out vec3 varWorldPos;
+out vec2 varTexCoord;
+
+uniform mat4 projViewModelMatrix;
+uniform mat4 modelMatrix;
+
+void main()
+{
+	varColor = inColor;
+	varNormal = inNormal;
+	varTangent = inTangent;
+	varBinormal = cross(inNormal, inTangent);
+	varWorldPos = vec4(modelMatrix * vec4(inPosition, 1)).xyz;
+	varTexCoord = vec2(inTexCoord.x, 1-inTexCoord.y);
+	
+	gl_Position = projViewModelMatrix * vec4(inPosition, 1);
+}
+
+## FRAGMENT
+// =====================================
+// ========== FRAGMENT SHADER ========== 
+#version 330
+
+in vec3 varColor;
+in vec3 varNormal;
+in vec3 varTangent;
+in vec3 varBinormal;
+in vec3 varWorldPos;
+in vec2 varTexCoord;
+
+out vec4 outColor0;
+out vec4 outColor1;
+out vec4 outColor2;
+
+uniform sampler2D diffuseMap;
+uniform sampler2D normalMap;
+uniform sampler2D specMap;
+uniform sampler2D glowMap;
+
+uniform vec4 lightPosition[16];
+uniform vec3 lightColor[16];
+
+uniform vec4 surfaceDiffuse;
+uniform vec4 surfaceSpecular;
+uniform vec4 surfaceAmbient;
+uniform vec3 cameraPosition;
+uniform mat3 normalMatrix;
+uniform mat3 itviewMatrix;
+
+void main()
+{
+	
+	vec3 normalTex = texture(normalMap, varTexCoord).xyz*2-1;
+	vec4 diffuseTex = texture(diffuseMap, varTexCoord);
+	vec4 specularTex = texture(specMap, varTexCoord);
+	
+	mat3 TBNMatrix = mat3(varTangent, varBinormal, varNormal);
+    vec3 newNormal = TBNMatrix * normalTex;
+    newNormal = normalize(normalMatrix * newNormal);
+	
+	float a = 0, b = 0;
+	float lightAtt = 0;
+	vec3 lightDir;
+	vec3 cameraDirection;
+	vec3 halfVec;
+	vec3 diffuseColor = surfaceAmbient.xyz;
+	vec3 specularColor = vec3(0,0,0);
+	for (int i=0; i<16; i++)
+	{
+		lightDir = lightPosition[i].xyz - varWorldPos;
+		lightAtt = pow(max(1-length(lightDir)/lightPosition[i].w, 0), 2);
+		lightDir = normalize(lightDir);
+		
+		cameraDirection = normalize(cameraPosition-varWorldPos);
+		halfVec = normalize(lightDir + cameraDirection);
+		
+		
+		a = max(dot(lightDir, newNormal), 0);
+		b = pow(max(dot(halfVec, newNormal), 0), 8);
+		diffuseColor += lightColor[i] * a * lightAtt;
+		specularColor += lightColor[i] * b * lightAtt;
+	}
+	
+	outColor2 = texture(glowMap, varTexCoord);
+	
+	outColor0 = 
+		vec4(diffuseColor, 1) * diffuseTex + 
+		vec4(specularColor, 1) * vec4(specularTex.rgb, 1) + 
+		outColor2;
+	
+	newNormal = itviewMatrix * newNormal;
+	
+	// Outcolor1 is for volumetric light
+	// Render black!
+	outColor1 = vec4(0,0,0,1);
+	
+}
+
+
+
+
+
+
+

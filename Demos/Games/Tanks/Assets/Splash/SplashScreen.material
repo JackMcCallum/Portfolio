@@ -1,0 +1,14 @@
+material Material_SplashScreen
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				mipmap_bias -10
+				texture SplashScreen.png
+			}
+		}
+	}
+}
